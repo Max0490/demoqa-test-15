@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 
-public class JunitDemoTest {
+public class JUnitDemoTest {
 
     @BeforeAll
     static void setUp() {
@@ -22,23 +22,26 @@ public class JunitDemoTest {
 
     @BeforeEach
     void beforeEachTest() {
-        // open("ya.ru")
-        System.out.println("### @BeforeEach !");
+        // open("ya.ru");
+        System.out.println("###     @BeforeEach !");
     }
 
     @AfterEach
     void afterEachTest() {
-        System.out.println("### @AfterEach !");
+        System.out.println("###     @AfterEach !");
     }
 
     @Test
     void simpleTestFirst() {
-        System.out.println("### @Test simpleTestFirst() !");
-        Assertions.assertTrue(3>2);
+
+        System.out.println("###         @Test simpleTestFirst() !");
+        Assertions.assertTrue(3 > 2);
     }
+
     @Test
     void simpleTestSecond() {
-        System.out.println("### @Test simpleTestSecond() !");
-        Assertions.assertTrue(3>2);
+
+        System.out.println("###         @Test simpleTestSecond() !");
+        Assertions.assertTrue(3 > 2);
     }
 }
