@@ -30,5 +30,12 @@ public class TextBoxTests {
         $("#submit").click();
 
         $("#submit").click();
+       // $("#output").$("#name").shouldHave(text("Maxim"));
+        $("#output #name").shouldHave(text("Maxim"));
+        $("#output #email").shouldHave(text("Maxim@maxim.ru"));
+        $("#output #currentAddress").shouldHave(text("Maximsk"));
+        $("#output #permanentAddress").shouldHave(text("Maximskaya oblast"));
+
+
     }
 }
