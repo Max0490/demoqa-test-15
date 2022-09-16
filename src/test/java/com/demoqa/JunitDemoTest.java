@@ -1,6 +1,12 @@
 package com.demoqa;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 
 public class JunitDemoTest {
 
@@ -10,7 +16,7 @@ public class JunitDemoTest {
     }
 
     @AfterAll
-    static void  tearDown() {
+    static void tearDown() {
         System.out.println("### @AfterAll !");
     }
 
