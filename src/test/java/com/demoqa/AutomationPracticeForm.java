@@ -1,8 +1,7 @@
 package com.demoqa;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.commands.SetValue;
-import com.google.gson.internal.bind.util.ISO8601Utils;
+import static com.codeborne.selenide.Selenide.$;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -22,16 +21,16 @@ public class AutomationPracticeForm {
     void fillFormTest
         open("/automation-practice-form");
         //ISO8601Utils ()
-        $("#firstName").SetValue("Maxim");
-        $("#lastName").SetValue("Dolgodvorov");
-        $("#userEmail").SetValue("Maxim@maxim.ru");
+        $("#firstName").setValue("Maxim");
+        $("#lastName").setValue("Dolgodvorov");
+        $("#userEmail").setValue("Maxim@maxim.ru");
         $("#genterWrapper").$(byText("Male")).click();
-        $("#userNumber").SetValue("1234567890");
+        $("#userNumber").setValue("1234567890");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("April");
         $(".react-datepicker__year-select").selectOption("1990");
         $(".react-datepicker__day--026").click();
-        $("#subjectsInput").SetValue("Arts").pressEnter();
+        $("#subjectsInput").setValue("Arts").pressEnter();
         $("hobbies-checkbox-1").click();
         $("#uploadPicture").uploadFromClasspath("pen-test.jpg");
         $("#currentAddress").setValue("Samara");
