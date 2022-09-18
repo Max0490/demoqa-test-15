@@ -13,5 +13,6 @@ public class FillFormPractice {
     }
 }
     @Test
+    void
     open("/automation-practice-form");
     $()
